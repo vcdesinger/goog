@@ -1,0 +1,408 @@
+/* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.chromeframe {position: absolute; top: 0;}
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+
+/* We like off-black for text. */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+	
+		
+}
+
+@font-face {
+    font-family: 'segoeui';
+    src: url("../fonts/segoeuil.ttf");
+}
+
+@font-face {
+    font-family: 'DINProB';
+    src: url("../fonts/DINPro-Bold.otf");
+}
+
+@font-face {
+    font-family: 'DINProL';
+    src: url("../fonts/DINPro-Light.otf");
+}
+
+@font-face {
+    font-family: 'DINProR';
+    src: url("../fonts/DINPro-Regular.otf");
+}
+
+
+h1, p, input{
+    font-family: segoeui;
+}
+
+body{
+    background: url("../img/top_bg.png") repeat-x #cfcfcf;
+    background-position: top right;
+}
+
+.wrapper{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+header{
+    width: 100%;
+    height: 48px;
+    position: relative;
+}
+
+    header .logo{
+        position: relative;
+        float: left;
+        width: 243px;
+        height: 100%;
+        background: #2a7de3;
+    }
+        header .logo h1{
+            float: left;
+            font-size: 18px;
+            color: #ffffff;
+            margin: 9px 0 0 10px;
+        }
+
+        header .logo p{
+            float: right;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+    header .contact{
+        float: left;
+        margin-top: 15px;
+    }
+
+        header .contact p{
+            float: left;
+            padding-left: 26px;
+            color: #edeceb;
+            font-size: 14px;
+            margin-left: 18px;
+        }
+        header .contact .mail{
+            background: url("../img/mail.png")no-repeat left center;
+        }
+        header .contact .skype{
+            background: url("../img/skype.png")no-repeat left center;
+        }
+
+    header .languate{
+        float: left;
+        margin: 18px 0 0 5px;
+    }
+        header .languate a{
+            float: left;
+            margin-left: 20px;
+        }
+    header .login{
+        float: right;
+        width: 236px;
+        height: 100%;
+        margin: 15px 0 0 10px;
+
+    }
+        header .login a,p{
+            color: #ababab;
+            float: left;
+            font-size: 16px;
+        }
+
+        header .login a:hover{
+            text-decoration: none;
+        }
+        header .login p{
+            font-family: DINProB;
+            margin-right: 15px;
+        }
+
+        header .login input[type=text], input[type=password]{
+            outline: none;
+            width: 100px;
+            height: 22px;
+            background: url("../img/gresis.png");
+            border:none;
+            padding: 0 7px;
+            color: #ababab;
+            font-size: 12px;
+            text-indent: 5px;
+        }
+        header .login input[type=text]:focus,input[type=password]:focus{
+            color: #fffefe;
+            background: url("../img/gresis_hover.png");
+        }
+        header .login input[type=submit]{
+            width: 18px;
+            height: 22px;
+            background: url("../img/zamok.png")no-repeat;
+            border: none;
+            opacity: 0.7;
+        }
+        header .login input[type=submit]:hover{
+            opacity: 1;
+        }
+article{
+    position: relative;
+    float: left;
+    z-index: 2;
+    width: 700px;
+    color: #3b3b3b;
+    padding-top: 32px;
+    background:
+        url("../img/article_top_bg.png")no-repeat top left,
+        url("../img/article_engel.png")no-repeat bottom right,
+        url("../img/white.png")repeat-y top left,
+        url("../img/sidebar_bgl.png")repeat-y top right;
+    }
+    .articl{
+
+        margin: 4px 0px 0px 12px;
+        position: relative;
+        background: url("../img/article_bg_line.png")no-repeat right bottom ;
+        padding-right: 32px;
+    }
+    .articl h1{
+        float: left;
+        font-family: DINProB;
+        font-size: 22px;
+    }
+    .articl .data{
+        float: right;
+        font-family: DINProL;
+        font-size: 16px;
+        margin: 5px 12px 0 0;
+    }
+    .articl img{
+        float: left;
+        margin-top: 18px;
+    }
+    .articl .discrip{
+        float: left;
+        width: 440px;
+        margin-top: 18px;
+        font-family: DINProR;
+        font-size: 14px;
+        margin-left: 18px;
+    }
+    .articl .avtor,.coments,.views,.rating,.read_all{
+        padding-left: 32px;
+        float: left;
+        height: 22px;
+        line-height: 22px;
+        margin: 10px 5px;
+    }
+    .articl .avtor{
+        background: url("../img/avtor.png")no-repeat left center;
+        color: #3b3b3b;
+    }
+    .articl a:hover{
+        text-decoration: none;
+    }
+    .articl .coments{
+        background: url("../img/coments.png")no-repeat left center;
+        color: #3b3b3b;
+    }
+    .articl .views{
+        background: url("../img/views.png")no-repeat left center;
+    }
+    .articl .rating{
+        background: url("../img/rating.png")no-repeat left center;
+    }
+    .articl .read_all{
+        background: url("../img/read_all.png")no-repeat left center;
+        float: right;
+        margin-right: 12px;
+    }
+    .articl_bottom{
+        min-height: 176px;
+        width: 100%;
+        font-family: DINProR;
+    }
+        .articl_bottom > p > a{
+            color: #3b3b3b;
+            font-size: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid #3b3b3b;
+            margin: 30px 30px;
+            padding-top: 30px;
+
+        }
+        .articl_bottom a:hover{
+            color: #2a7de3;
+            border-bottom: 1px solid #2a7de3;
+        }
+        .articl_bottom .back{
+            float: left;
+        }
+        .articl_bottom .next{
+            float: right;
+        }
+        .articl_bottom .but{
+            margin:45px 0 0 88px;
+        }
+            .articl_bottom .but a{
+                color: #3b3b3b;
+                font-size: 24px;
+                padding: 19px 60px 19px 60px;
+                text-decoration: none;
+                background: #f5f5f5;
+                border: 1px solid #cfcfcf;
+            }
+            .articl_bottom .but a:hover{
+                text-decoration: none;
+                background: #ebe8e8;
+            }
+            .articl_bottom .but a span{
+                color: #2a7de3;
+                font-family: DINProB;
+            }
+
+
+aside{
+    position: relative;
+    width: 269px;
+    margin-left: -30px;
+    float: right;
+    z-index: 3;
+    background: url("../img/white2.png")repeat-y top right;
+    padding-bottom: 2px;
+}
+
+    aside .menu{
+        position: relative;
+        z-index: 4;
+        width: 100%;
+        font-family: DINProL;
+    }
+        aside .menu .top{
+            position: relative;
+            width: 269px;
+            height: 37px;
+            background: url("../img/sidebar_top.png")no-repeat;
+        }
+            aside .menu .top h1{
+
+                font-size: 18px;
+                color: #ffffff;
+                padding: 11px 0 0 40px;
+                text-transform: uppercase;
+            }
+        aside .menu .sidebar_content{
+            background: url("../img/sidebar_bg.png")repeat-y;
+            padding-left: 40px;
+
+        }
+            aside .menu .sidebar_content input[type=text]{
+                height: 32px;
+                width: 182px;
+                background: #ffffff;
+                border: none;
+                outline: none;
+                color: #3b3b3b;
+                font-size: 14px;
+                margin:5px 0 5px 0px;
+                padding:0 12px 0 12px ;
+            }
+            aside .menu .sidebar_content input[type=submit]{
+                height: 32px;
+                width: 32px;
+                background: url("../img/search.png")no-repeat center center #2a7de3;
+                border: none;
+                outline: none;
+                margin-left: -3px;
+            }
+            aside .menu .sidebar_content .habs{
+                float: left;
+                width: 100px;
+                margin-bottom: 5px;
+                color: #cfcfcf;
+            }
+            aside .menu .sidebar_content .habs a, .new_zap a{
+                color: #cfcfcf;
+                font-size: 14px;
+                text-decoration: none;
+                border-bottom: 1px solid #cfcfcf;
+
+            }
+                aside .menu .sidebar_content  sup{
+                    color: #5f9eea;
+                }
+            aside .menu .sidebar_content .habs a:hover, .new_zap a:hover{
+                color: #FFFFFF;
+                font-size: 14px;
+
+            }
+            aside .menu .sidebar_content .new_zap{
+                width: 205px;
+                padding-bottom: 5px;
+            }
+        aside .menu .bottom{
+            height: 37px;
+            background: url("../img/sidebar_bottom.png")no-repeat;
+            margin-bottom: -32px;
+        }
+footer{
+     height: 58px;
+     background: #ffffff;
+     border-top: 3px solid #2a7de3;
+    margin-top: 75px;
+ }
+
+    footer .footer_content{
+        width: 940px;
+        margin: 0 auto;
+    }
+        footer .footer_content p{
+            float: right;
+            color: #2a7de3;
+            font-size: 14px;
+            font-family: DINProB;
+            margin-top: 20px;
+        }
