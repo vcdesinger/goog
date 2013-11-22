@@ -1,5 +1,5 @@
 AddDefaultCharset UTF-8
-
+#f dfsfds
 Options +FollowSymLinks
 IndexIgnore */*
 RewriteEngine on
