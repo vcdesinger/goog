@@ -11,6 +11,6 @@ defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
 require_once($yii);
 /*
- * fdsfdsfdsafaf
+ * 111
  */
 Yii::createWebApplication($config)->run();
